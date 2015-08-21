@@ -1,6 +1,6 @@
 import sys
 from setuptools.command.test import test as TestCommand
-from setuptools import setup
+from setuptools import setup, find_packages
 
 class PyTest(TestCommand):
     user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
@@ -26,7 +26,7 @@ setup(
     author='Kyle Richardson',
     author_email='kylerichardson2@gmail.com',
     license='MIT',
-    packages=['whoisapi'],
+    packages=find_packages(),
     install_requires=['requests'],
     tests_require=['pytest'],
     cmdclass={'test':PyTest},
