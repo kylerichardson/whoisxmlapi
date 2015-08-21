@@ -20,15 +20,15 @@ class PyTest(TestCommand):
         sys.exit(errno)
 
 setup(
-    name='whoisapi',
-    version='0.0.1',
+    name='whoisxmlapi',
+    version='0.1',
     description='Wrapper for whoisxmlapi web service',
     author='Kyle Richardson',
     author_email='kylerichardson2@gmail.com',
     license='MIT',
-    packages='whoisapi',
+    packages=['whoisapi'],
     install_requires=['requests'],
-    tests_requires=['pytest'],
+    tests_require=['pytest'],
     cmdclass={'test':PyTest},
 )
 
